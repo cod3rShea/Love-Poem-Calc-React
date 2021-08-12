@@ -21,7 +21,6 @@ const LoverNames = () => {
 	};
 
 	const getLovePercent = (test) => {
-		console.log("key", `${process.env.REACT_APP_PERCENT_API_KEY}`);
 		fetch(test, {
 			method: "GET",
 			headers: {
