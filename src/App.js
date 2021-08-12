@@ -1,11 +1,11 @@
 import "./App.css";
 import CallToAction from "./component/CallToAction/CallToAction";
-import LoverNames from "./component/LoverNames/LoveNames";
+import LoverPercent from "./component/LovePercent/LovePercent";
 function App() {
 	return (
 		<div className="App">
 			<CallToAction />
-			<LoverNames />
+			<LoverPercent />
 		</div>
 	);
 }
