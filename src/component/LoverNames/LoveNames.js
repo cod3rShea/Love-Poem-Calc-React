@@ -20,8 +20,8 @@ const LoverNames = () => {
 		}
 	};
 
-	const getLovePercent = (test) => {
-		fetch(test, {
+	const getLovePercent = (url) => {
+		fetch(url, {
 			method: "GET",
 			headers: {
 				"x-rapidapi-key": process.env.REACT_APP_PERCENT_API_KEY,
