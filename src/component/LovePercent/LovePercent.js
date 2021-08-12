@@ -1,4 +1,4 @@
-const LovePercent = (yourName, yourCrushName) => {
+const LovePercent = () => {
 	return <>test</>;
 };
 

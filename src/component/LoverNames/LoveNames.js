@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from "react";
-import LovePercent from "../LovePercent/LovePercent";
+import React, { useState } from "react";
 
 const LoverNames = () => {
 	const [yourName, setYourName] = useState("");
 	const [yourCrushName, setYourCrushName] = useState("");
-	let calcQueryURL;
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
