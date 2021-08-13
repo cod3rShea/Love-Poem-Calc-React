@@ -1,10 +1,6 @@
 const LovePercentContent = (obj) => {
 	let data = obj.data;
 
-	if (!data) {
-		return <>test</>;
-	}
-
 	return (
 		<>
 			<li>{data.fname}</li>

@@ -6,12 +6,9 @@ const LovePercent = () => {
 	const [yourName, setYourName] = useState("");
 	const [yourCrushName, setYourCrushName] = useState("");
 	const [yourLovePercent, setYourLovePercent] = useState("");
-	const [yourLovePoems, setYourLovePoems] = useState([]);
+	const [yourLovePoems, setYourLovePoems] = useState("");
 	const [yourSwitch, setYourSwitch] = useState(false);
 	const [yourNameMissing, setYourNameMissing] = useState("");
-
-	console.log("name", yourName);
-	console.log("yourname", yourCrushName);
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -57,8 +54,10 @@ const LovePercent = () => {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				setYourSwitch(true);
 				return setYourLovePoems(data);
+			})
+			.then(() => {
+				return setYourSwitch(true);
 			})
 			.catch((err) => {
 				console.error(err);
