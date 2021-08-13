@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 const LovePercentContent = (obj) => {
 	let data = obj.data;
 
