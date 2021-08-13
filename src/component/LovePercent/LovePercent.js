@@ -7,20 +7,27 @@ const LovePercent = () => {
 	const [yourCrushName, setYourCrushName] = useState("");
 	const [yourLovePercent, setYourLovePercent] = useState("");
 	const [yourLovePoems, setYourLovePoems] = useState([]);
+	const [yourSwitch, setYourSwitch] = useState(false);
+	const [yourNameMissing, setYourNameMissing] = useState("");
+
+	console.log("name", yourName);
+	console.log("yourname", yourCrushName);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (yourName && yourCrushName) {
+		if (yourName !== "" && yourCrushName !== "") {
 			let calcQueryURL =
 				"https://love-calculator.p.rapidapi.com/getPercentage?fname=" +
 				yourName +
 				"&sname=" +
 				yourCrushName;
+			console.log("yourName2", yourName);
 			getLovePercent(calcQueryURL);
 			setYourName("");
 			setYourCrushName("");
 		} else {
 			console.log("you most enter two names");
+			setYourNameMissing("please enter both names");
 		}
 	};
 
@@ -50,6 +57,7 @@ const LovePercent = () => {
 		})
 			.then((response) => response.json())
 			.then((data) => {
+				setYourSwitch(true);
 				return setYourLovePoems(data);
 			})
 			.catch((err) => {
@@ -57,7 +65,7 @@ const LovePercent = () => {
 			});
 	}
 
-	if (getLovePercent && poemLines) {
+	if (yourSwitch) {
 		return (
 			<>
 				<h2>Enter Two Names:</h2>
@@ -68,7 +76,7 @@ const LovePercent = () => {
 					onChange={(e) => setYourName(e.target.value)}
 				/>
 				<input
-					name="yourName"
+					name="yourCrushName"
 					value={yourCrushName}
 					placeholder="Your Crush's Name"
 					onChange={(e) => setYourCrushName(e.target.value)}
@@ -100,6 +108,7 @@ const LovePercent = () => {
 			<button type="submit" className="btn" onClick={handleSubmit}>
 				Get Poem
 			</button>
+			{yourNameMissing}
 		</>
 	);
 };
