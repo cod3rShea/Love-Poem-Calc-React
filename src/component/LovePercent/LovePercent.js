@@ -13,8 +13,8 @@ const LovePercent = () => {
 	console.log("name", yourName);
 	console.log("yourname", yourCrushName);
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
+	const handleSubmit = (event) => {
+		event.preventDefault();
 		if (yourName !== "" && yourCrushName !== "") {
 			let calcQueryURL =
 				"https://love-calculator.p.rapidapi.com/getPercentage?fname=" +
