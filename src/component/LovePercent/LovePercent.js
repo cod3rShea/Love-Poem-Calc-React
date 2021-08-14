@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import LovePercentContent from "../LovePercentContent/LovePercentContent";
 import LovePoem from "../LovePoem/LovePoem";
 
