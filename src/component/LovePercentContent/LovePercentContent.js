@@ -1,6 +1,6 @@
 const LovePercentContent = (obj) => {
 	let data = obj.data;
-
+	console.log("ovepercentcontent");
 	return (
 		<>
 			<li>{data.fname}</li>

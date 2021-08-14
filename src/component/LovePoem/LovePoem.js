@@ -1,5 +1,5 @@
 const LovePoem = (obj) => {
-	console.log("");
+	console.log("log");
 	let data = obj.data;
 	const poem = data
 		.sort(() => Math.random() - Math.random())
