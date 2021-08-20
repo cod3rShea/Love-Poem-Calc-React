@@ -91,7 +91,9 @@ const LovePercent = () => {
 				<button type="submit" className="btn" onClick={switchFS}>
 					Reset
 				</button>
-				<LovePercentContent data={yourLovePercent} />
+				<ul className="users-container">
+					<LovePercentContent data={yourLovePercent} />
+				</ul>
 				<LovePoem data={yourLovePoems} />
 			</>
 		);

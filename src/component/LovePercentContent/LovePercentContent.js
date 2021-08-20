@@ -1,11 +1,10 @@
 const LovePercentContent = (obj) => {
 	let data = obj.data;
-	console.log("ovepercentcontent");
 	return (
 		<>
-			<li>{data.fname}</li>
-			<li>{data.sname}</li>
-			<li>{data.percentage}</li>
+			<li>Your Name: {data.fname}</li>
+			<li>Your Crushes Name: {data.sname}</li>
+			<li>Match Percent: {data.percentage}</li>
 			<li>{data.result}</li>
 		</>
 	);
